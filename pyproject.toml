@@ -8,6 +8,8 @@ packages = [{include = "fffunds", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+matplotlib = "^3.8.4"
+pandas = "^2.2.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -16,6 +18,7 @@ pre-commit = "^3.7.0"
 mypy = "^1.9.0"
 ruff = "^0.3.5"
 black = {version = "^24.3.0", allow-prereleases = true}
+ipykernel = "^6.29.4"
 
 [build-system]
 requires = ["poetry-core"]
@@ -24,7 +27,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.black]
 line-length = 79
 skip-magic-trailing-comma = true
-target-version = ["py311"]
+target-version = ["py312"]
 include = '\.pyi?$'
 
 # exclude a few common directories in the root of the project
@@ -74,6 +77,9 @@ ignore = [
     "T201",  # `print` found
     "COM812",  # trailing comma missing
     "D105",  # missing docstring in magic method
+    "I001",  # implicit namespace package
+    "INP001",  # implicit namespace package
+    "D100",  # missing docstring in public module
 ]
 
 [tool.ruff.extend-per-file-ignores]
