@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "fffunds"
+version = "0.1.0"
+description = ""
+authors = ["Callum Hobbis <callum.hobbis@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fffunds", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^5.0.0"
+pre-commit = "^3.7.0"
+mypy = "^1.9.0"
+ruff = "^0.3.5"
+black = {version = "^24.3.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+skip-magic-trailing-comma = true
+target-version = ["py311"]
+include = '\.pyi?$'
+
+# exclude a few common directories in the root of the project
+# also separately exclude a file named foo.py in the root of
+# the project
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py
+)
+'''
+
+[tool.mypy]
+follow_imports = "silent"
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+implicit_reexport = false
+disallow_untyped_defs = true
+ignore_missing_imports = true
+exclude = "tests"
+
+[tool.pyright]
+executionEnvironments = [
+    { root = "src" }
+]
+extraPaths = ["src"]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 79
+select = ["ALL"]
+ignore = [
+    "T201",  # `print` found
+    "COM812",  # trailing comma missing
+    "D105",  # missing docstring in magic method
+]
+
+[tool.ruff.extend-per-file-ignores]
+"tests/*" = ["D1", "PLR2004", "S101"]
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
