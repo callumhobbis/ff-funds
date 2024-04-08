@@ -1,0 +1,15 @@
+Future work to improve this data processing pipeline:
+- Improve company name matching:
+  - Add name matching for all companies, not just fossil fuel companies.
+  - Add support for company "aliases", e.g. Meta and Facebook, as they represent the same company but can't be distinguished just from name.
+  - When no certain match can be found, use fuzzy find methods like the Jaccard index to suggest matches which volunteers can manually approve.
+  - Non-trivial matches should be added to a database for faster lookup.
+  - Algorithm for matching list of companies to fossil fuel list can be optimized, e.g. using the fact that each list of companies will have no duplicates.
+  - Account for potential OCR parsing errors in scans of physical documents.
+  - Current algorithm could have false positives.
+- Extend pipeline to multiple areas of concern, e.g. weapons, animal welfare
+  - This should also affect the data visualisation, with the bar split into each of the areas of concern.
+- Improve Python API for further research, e.g. with the sample Company and Fund classes as a start point.
+- Improve data visualisation:
+  - Users should be able to find out more about the fossil fuel companies being funded.
+  - Better color scheme and interactivity to make it stand out.

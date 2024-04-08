@@ -1,7 +1,5 @@
 # Mindful Money Technical Challenge
 
-**Due date:** 5pm Monday 11 April
-
 **Expected time commitment:** 1.5 - 3 hours
 
 This challenge is a simplified subset of Mindful Money’s data processing pipeline. The high level goal is to be able to inform the public in a clear, easy-to-understand way about how much an investment fund is invested in certain harmful industries.
@@ -50,15 +48,3 @@ Your solution will be evaluated against the following criteria:
 
 - The way you use version control (how you commit code to git, etc.).
 - Starting from scratch vs. using existing tools - you can use any libraries (e.g. pandas), templates, or code snippets that you find online.
-
-## Submission
-
-You can submit your code, data visualisations, and insights, in any one of the following ways:
-1. Public GitHub/GitLab/BitBucket repository: just email us the link to it at liam@mindfulmoney.nz
-2. Private GitHub repository: Add [LMilbank](https://github.com/LMilbank) as a collaborator so that we can access it, and send an email to liam@mindfulmoney.nz letting him know that you’ve done that.
-3. Email: zip up all the data/code/notebooks required to produce your results + any images/figures/comments and email it to liam@mindfulmoney.nz
-
-## Reach out if you have questions
-
-- We’re all humans so if you need more time or life stuff crops up, please reach out and let us know. We are more than happy to accommodate your needs.
-- If you’d like something clarified - feel free to ask! Not everyone interprets things the same way and we’d be happy to discuss it with you.
